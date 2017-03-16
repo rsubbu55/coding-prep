@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"df39dd2989","applicationID":"9529167","transactionName":"d1xaEUJYClRcRk0TFVFBR0pDUhVLUFsMFUlaVkM=","queueTime":0,"applicationTime":13,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1026.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="Kings Gambit Labs">
+
+  <title>InterviewBit: Sign In for Coding Interview Preparation</title>
+<meta name="description" content="Learn and Practice on almost all coding interview questions asked historically and get referred to the best tech companies" />
+<meta property="og:site_name" content="InterviewBit" />
+<meta property="og:site" content="InterviewBit" />
+<meta property="og:description" content="Learn and Practice on almost all coding interview questions asked historically and get referred to the best tech companies" />
+<meta property="og:image" content="http://ibassets.s3.amazonaws.com/static-assets/ib-logo-square.png" />
+<meta property="og:url" content="https://www.interviewbit.com/users/sign_in/" />
+<link rel="canonical" href="https://www.interviewbit.com/users/sign_in/" />
+  
+  <meta property="fb:app_id" content="314158428787536" />
+  <link rel="icon" type="image/png" href="https://dajh2p2mfq4ra.cloudfront.net/assets/favicon-9414372d0345a6e17040ae77f41c1c5fc151f5dc7cd6c63d9887cfef8552734a.png">
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://dajh2p2mfq4ra.cloudfront.net/assets/html5shiv-d3d35aa8c5c7074d41080b04f1324ad142a05add2f6e1e2ac7028b1eb3bece66.js" media="all"></script>
+  <script src="https://dajh2p2mfq4ra.cloudfront.net/assets/respond-75d702c10ebce1f5d73849f65ca0830fa4c3a11aed6f19bddd96efde62b6c4fa.js" media="all"></script>
+  <![endif]-->
+
+  <script>(function () {
+    window.jsLoggerBasePath || (window.jsLoggerBasePath = '');
+
+    window.jsLoggerUrl || (window.jsLoggerUrl = "/logger/rails_client_logger/log");
+
+    window.jsLogger = {
+        invoke: function (level, message) {
+            return jQuery.ajax({
+                type: 'post',
+                beforeSend: function (xhr) {
+                    return xhr.setRequestHeader('X-CSRF-Token', jQuery('meta[name="csrf-token"]').attr('content'));
+                },
+                data: {
+                    level: level,
+                    message: message
+                },
+                complete: function (request) {
+                },
+                url: "" + window.jsLoggerBasePath + window.jsLoggerUrl
+            });
+        },
+        debug: function (message) {
+            return this.invoke('debug', message);
+        },
+        info: function (message) {
+            return this.invoke('info', message);
+        },
+        warn: function (message) {
+            return this.invoke('warn', message);
+        },
+        error: function (message) {
+            return this.invoke('error', message);
+        },
+        fatal: function (message) {
+            return this.invoke('fatal', message);
+        }
+    };
+
+    window.onerror = function (message, url, line_number) {
+        if (message instanceof jQuery.Event && message.target.src.indexOf('fbcdn-profile') !== -1 ) {
+            return;
+        } else if (message instanceof jQuery.Event && message.target.src.indexOf('graph.facebook.com') !== -1 ) {
+            return;
+        } else if ($.type(message) === 'string' && message.indexOf("Script error") !== -1) {
+            return;
+        }
+        console.log(message);
+        jsLogger.fatal("Uncaught error in: " + url + ":" + line_number + "\nDetails: " + message);
+    };
+})();
+</script>
+  <link rel="stylesheet" media="all" href="https://dajh2p2mfq4ra.cloudfront.net/assets/web/application-89d15df784688bedc1e9248467a5704999e7993412dfcb4dc9851d45060929d4.css" />
+  <link rel="stylesheet" media="all" href="https://dajh2p2mfq4ra.cloudfront.net/assets/users/sessions-fca29f61c86e970a859deb26f00b32ab163362e5c6c4e5940e72bb2a0cc5e440.css" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="F5q2AuRUOLoB0L05eBnGH9osVIIlXnmAvfklWFTtit3LkyXeYm8EygHFcZRUzEjjFtlQceeb9jJHxkLiKZU4vQ==" />
+</head>
+<body>
+<nav class="navbar navbar-inverse mit-header navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        InterviewBit <span style="margin-left:5px;background-color:#B71C1C;padding:5px;border-radius:5px;">Beta</span>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <div class="nav navbar-nav hidden-xs hidden-sm hidden-md">
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/users/sign_in/">Sign In</a>
+            </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+  <div class="container global_notice">
+        <div class="col-xs-12">
+        <div class="alert alert-alert alert-dismissible" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            You need to sign in or sign up before continuing.
+        </div>        
+        </div>
+  </div>
+<div class='notifications top-right'></div>
+<div class='notifications top-left'></div>
+<div class='notifications bottom-right'></div>
+<div class='notifications bottom-left'></div>
+
+<div class="user-screen login-page">
+  <div class="page-header">
+    <span class="login-header">Log in to your account</span>
+  </div>
+
+  <div class="col-xs-12 col-md-4 login-btn-ct">
+  <a href="/users/auth/facebook/" class="btn btn-block btn-lg btn-facebook">
+    <i class="fa fa-facebook"></i>
+  </a>
+</div>
+<div class="col-xs-12 col-md-4 login-btn-ct">
+  <a href="/users/auth/linkedin/" class="btn btn-block  btn-lg btn-linkedin">
+    <span class="fa fa-linkedin"></span>
+  </a>
+</div>
+<div class="col-xs-12 col-md-4 login-btn-ct">
+  <a href="/users/auth/github/" class="btn btn-block  btn-lg btn-github">
+    <i class="fa fa-github"></i>
+  </a>
+</div>
+<div class="col-xs-12 col-md-4 login-btn-ct">
+  <a href="/users/auth/google_oauth2/" class="btn btn-block  btn-lg btn-google">
+    <i class="fa fa-google-plus"></i>
+  </a>
+</div>
+<div class="clearfix"></div>
+<div class="or-container">
+  <hr class="or-hr">
+  <div class="or">or</div>
+</div>
+  <!-- Hack for now -->
+  <form class="new_user" id="new_user" action="/users/sign_in/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="TCnMAy6/gLnGxmEtO+cv3GjoA4wKiEK0UngfkAafLUCQIF/fqIS8ycbTrYAXMqEgpB0Hf8hNzQaoR3gqe+efIA==" />
+
+      <div class="form-group">
+        <label for="user_email">Email</label>
+        <input id="user_email" name="user[email]" type="email" value="" class="form-control">
+      </div>
+
+      <div class="form-group"><label for="user_password">Password</label>
+        <input autocomplete="off" id="user_password" name="user[password]" type="password" class="form-control">
+      </div>
+
+          <div class="checkbox">
+            <label>
+              <input id="user_remember_me" name="user[remember_me]" type="checkbox" value="1" checked>Remember Me
+            </label>
+          </div>
+          <!--<div class="form-group"> </div>-->
+
+      <div>
+        <input name="commit" type="submit" value="Log in" class="landing-page-btn user-btn btn btn-primary">
+      </div>
+</form>
+
+  <br/>
+  <br/>
+
+  <div class="sign-up-panel-links">
+    <a href="/users/sign_up/">Sign up</a><br />  
+    <a href="/users/password/new/">Forgot your password?</a><br />
+        <a href="/users/confirmation/new/">Didn&#39;t receive confirmation instructions?</a><br />
+  </div>
+  <br/>
+</div>
+
+<section id="footer" class="section">
+  <div class="container">
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="/pages/about_us/">About Us</a></li>
+        <li><a href="/pages/faq/">FAQ</a></li>
+        <li><a href="/pages/contact_us/">Contact Us</a></li>
+        <li><a href="/pages/terms/">Terms</a></li>
+        <li><a href="/pages/privacy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="/courses/system-design/">System Design Questions</a></li>
+        <li><a href="/problems/google-interview-questions">Google Interview Questions</a></li>
+        <li><a href="/problems/facebook-interview-questions">Facebook Interview Questions</a></li>
+        <li><a href="/problems/amazon-interview-questions">Amazon Interview Questions</a></li>
+        <li><a href="/problems/microsoft-interview-questions">Microsoft Interview Questions</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" style="margin-top: 10px" id="footer-social">
+        <ul class="list-inline">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/interviewbit">
+              <i class="fa fa-facebook"></i>
+              <span style="padding-left: 8px">Like Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/interview_bit">
+              <i class="fa fa-twitter"></i>
+              <span style="padding-left: 8px">Follow Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:hello@interviewbit.com">
+              <i class="fa fa-envelope-o"></i>
+              <span style="padding-left: 8px">Email</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<script type="text/x-template" id="global-modal-template">
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Info</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+    
+
+
+<script src="https://dajh2p2mfq4ra.cloudfront.net/assets/web/application-6bb083c1353b29652e892dcb768c9419bde2d0a599b0118c33ee0483b4583b3c.js" crossorigin="anonymous"></script>
+<script src="https://dajh2p2mfq4ra.cloudfront.net/assets/users/sessions-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js" crossorigin="anonymous"></script>
+    <script>myinterviewtrainer.keyword_search.init();</script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56207880-1', 'auto');
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+
+</body>
+</html>
