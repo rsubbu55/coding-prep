@@ -21,6 +21,10 @@
  * 
  * @Output head pointer of list.
  */
+listnode* reverse(listnode* A) 
+{
+    //TODO
+}
 listnode* reverseBetween(listnode* A, int m, int n) {
 
     
