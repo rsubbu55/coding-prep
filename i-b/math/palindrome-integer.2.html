@@ -1,0 +1,168 @@
+<div id='hint-type' data-hint-title="Complete Solution" 
+  data-suggest-edits-url = "/courses/1/topics/3/problems/palindrome-integer/hints/165/suggest-edits/" 
+  data-does-edits="false"
+  data-hidden="true"></div>
+<div class="markdown-content">
+  <div role="tabpanel">
+
+  <ul class="nav nav-tabs" role="tablist" data-tabs="tabs">
+<li role="presentation"><a href="#c" aria-controls="c" role="tab" data-toggle="tab">C</a></li>
+<li role="presentation" class="active"><a href="#cplus" aria-controls="cplus" role="tab" data-toggle="tab">C++</a></li>
+<li role="presentation"><a href="#java" aria-controls="java" role="tab" data-toggle="tab">Java</a></li>
+<li role="presentation"><a href="#python" aria-controls="python" role="tab" data-toggle="tab">Python</a></li>
+<li role="presentation"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">JS</a></li>
+</ul>
+
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane" id="c">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="cm">/**
+ * @input A : Integer
+ * 
+ * @Output Integer 0 / 1. Return 0 if the number is not palindrome, else return 1
+ */</span>
+<span class="kt">int</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="kt">int</span> <span class="n">A</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">b</span><span class="o">=</span><span class="n">A</span><span class="p">,</span><span class="n">rev</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">dig</span><span class="p">;</span>
+   <span class="k">while</span> <span class="p">(</span><span class="n">A</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span>
+ <span class="p">{</span>
+      <span class="n">dig</span> <span class="o">=</span> <span class="n">A</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="n">rev</span> <span class="o">=</span> <span class="n">rev</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">dig</span><span class="p">;</span>
+      <span class="n">A</span> <span class="o">=</span> <span class="n">A</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+ <span class="p">}</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="n">rev</span><span class="o">?</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">);</span> 
+<span class="p">}</span>
+
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane active" id="cplus">
+
+      <div class="language-cpp highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="kt">int</span> <span class="n">reverse</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="kt">int</span> <span class="n">rev</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">digit</span><span class="p">;</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">digit</span> <span class="o">=</span> <span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+                <span class="c1">// check for overflow here
+</span>                <span class="k">if</span> <span class="p">(</span><span class="n">rev</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">INT_MAX</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">rev</span> <span class="o">==</span> <span class="p">(</span><span class="n">INT_MAX</span> <span class="o">/</span> <span class="mi">10</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">digit</span> <span class="o">&gt;</span> <span class="p">(</span><span class="n">INT_MAX</span> <span class="o">%</span> <span class="mi">10</span><span class="p">)))</span> <span class="p">{</span>
+                    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="n">rev</span> <span class="o">=</span> <span class="n">rev</span> <span class="o">*</span> <span class="mi">10</span> <span class="o">+</span> <span class="n">digit</span><span class="p">;</span>
+                <span class="n">x</span><span class="o">/=</span><span class="mi">10</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">rev</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kt">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>
+            <span class="c1">// Lets try reversing x. If reverse overflows, 
+</span>            <span class="c1">// then the number is not palindromic anyway. 
+</span>            <span class="k">return</span> <span class="n">x</span> <span class="o">==</span> <span class="n">reverse</span><span class="p">(</span><span class="n">x</span><span class="p">);</span>
+        <span class="p">}</span>
+<span class="p">};</span>
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="java">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">isPalindrome</span><span class="o">(</span><span class="kt">int</span> <span class="n">A</span><span class="o">)</span> <span class="o">{</span>
+	    <span class="n">String</span> <span class="n">str</span> <span class="o">=</span> <span class="n">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">A</span><span class="o">);</span>
+	    <span class="kt">boolean</span> <span class="n">pal</span> <span class="o">=</span> <span class="n">palindrome</span><span class="o">(</span><span class="n">str</span><span class="o">);</span>
+	    <span class="k">return</span> <span class="n">pal</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="mi">0</span><span class="o">;</span>
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">palindrome</span><span class="o">(</span><span class="n">String</span> <span class="n">str</span><span class="o">)</span> <span class="o">{</span>
+	    <span class="kt">int</span> <span class="n">start</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	    <span class="kt">int</span> <span class="n">end</span> <span class="o">=</span> <span class="n">str</span><span class="o">.</span><span class="na">length</span><span class="o">()</span> <span class="o">-</span> <span class="mi">1</span><span class="o">;</span>
+	    
+	    <span class="k">while</span> <span class="o">(</span><span class="n">start</span> <span class="o">&lt;</span> <span class="n">end</span><span class="o">)</span> <span class="o">{</span>
+	        <span class="k">if</span> <span class="o">(</span><span class="n">str</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">start</span><span class="o">)</span> <span class="o">!=</span> <span class="n">str</span><span class="o">.</span><span class="na">charAt</span><span class="o">(</span><span class="n">end</span><span class="o">))</span>
+	            <span class="k">return</span> <span class="kc">false</span><span class="o">;</span>
+	        <span class="n">start</span><span class="o">++;</span>
+	        <span class="n">end</span><span class="o">--;</span>
+	    <span class="o">}</span>
+	    
+	    <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="python">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="c"># @param A : integer</span>
+    <span class="c"># @return an integer</span>
+    <span class="k">def</span> <span class="nf">isPalindrome</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">):</span>
+        <span class="n">A</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">A</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">A</span><span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)]:</span>
+                <span class="k">return</span> <span class="mi">0</span>
+        <span class="k">return</span> <span class="mi">1</span>
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="javascript">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> 
+   <span class="c1">//param a : integer</span>
+    <span class="c1">//return an integer</span>
+	<span class="na">isPalindrome</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">n</span><span class="p">){</span>
+
+  <span class="k">if</span><span class="p">(</span> <span class="nx">n</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">if</span><span class="p">(</span> <span class="o">!</span><span class="nx">n</span> <span class="p">)</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+
+  <span class="kd">var</span> <span class="nx">on</span> <span class="o">=</span> <span class="nx">n</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">rn</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="kd">var</span> <span class="nx">rem</span><span class="p">;</span>
+  <span class="k">while</span><span class="p">(</span> <span class="nx">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">rem</span> <span class="o">=</span> <span class="nx">n</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+    <span class="nx">rn</span> <span class="o">*=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="nx">rn</span> <span class="o">+=</span> <span class="nx">rem</span><span class="p">;</span>
+    <span class="nx">n</span> <span class="o">-=</span> <span class="nx">rem</span><span class="p">;</span>
+    <span class="nx">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="c1">//console.log( rn, n );</span>
+  <span class="k">return</span> <span class="nx">on</span> <span class="o">===</span> <span class="nx">rn</span> <span class="p">?</span> <span class="mi">1</span> <span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>

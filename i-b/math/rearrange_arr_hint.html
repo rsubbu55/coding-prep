@@ -1,0 +1,36 @@
+<div id='hint-type' data-hint-title="Solution Approach" 
+  data-suggest-edits-url = "/courses/1/topics/3/problems/rearrange-array/hints/518/suggest-edits/" 
+  data-does-edits="true"
+  data-hidden="true"></div>
+<div class="markdown-content">
+  <p>If you had extra space to do it, the problem will be very easy. <br />
+Store a copy of Arr in B.</p>
+
+<p>And then for every element, do Arr[i] = B[B[i]]</p>
+
+<p>Lets restate what we just said for extra space :</p>
+
+<p>If we could somehow store 2 numbers in every index ( that is, Arr[i] can contani the old value, and the new value somehow ), then the problem becomes very easy. <br />
+NewValue of Arr[i] = OldValue of Arr[OldValue of Arr[i]]</p>
+
+<p>Now, we will do a slight trick to encode 2 numbers in one index. <br />
+This trick assumes that <code class="highlighter-rouge">N * N</code> does not overflow.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>1) Increase every Array element Arr[i] by (Arr[Arr[i]] % n)*n.
+2) Divide every element by N.
+</code></pre>
+</div>
+
+<p>Given a number as <br />
+<code class="highlighter-rouge">
+   A = B + C * N   if ( B, C &lt; N )
+   A % N = B
+   A / N = C
+</code></p>
+
+<p>We use this fact to encode 2 numbers into each element of Arr.</p>
+
+
+</div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>

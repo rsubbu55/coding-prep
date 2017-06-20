@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"df39dd2989","applicationID":"9529167","transactionName":"d1xaEUJYClRcRk0RA1YcRBdfVQpdVEdNFQ5bRA==","queueTime":0,"applicationTime":499,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(2),u=e(3),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}finally{f.emit("fn-end",[c.now()],t)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],3:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],4:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=m(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){v[e]=m(e).concat(n)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(t)}function g(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var v={},y={},b={on:l,emit:t,get:w,listeners:m,context:n,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(2),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!x++){var e=h.info=NREUM.info,n=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+h.offset],null,"api");var t=d.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===d.readyState&&i()}function i(){f("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),f=e("handle"),c=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1039.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=n.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),f("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="author" content="Kings Gambit Labs">
+
+  <title>Rearrange Array — InterviewBit</title>
+<meta name="description" content="Rearrange a given array so that Arr[i] becomes Arr[Arr[i]] with O(1) extra space. Example: Input : [1, 0] Return : [0, 1] Lets say N = size of the array. Then, following holds true : * All elements in the array are in the range [0, N-1] * N * N does not overflow for a signed integer" />
+<meta property="og:url" content="https://www.interviewbit.com/problems/rearrange-array/" />
+<meta property="og:title" content="Rearrange Array - InterviewBit" />
+<meta property="og:image" content="https://dajh2p2mfq4ra.cloudfront.net/assets/favicon-9414372d0345a6e17040ae77f41c1c5fc151f5dc7cd6c63d9887cfef8552734a.png.gz" />
+<meta property="og:description" content="Rearrange a given array so that Arr[i] becomes Arr[Arr[i]] with O(1) extra space. Example: Input : [1, 0] Return : [0, 1] Lets say N = size of the array. Then, following holds true : * All elements in the array are in the range [0, N-1] * N * N does not overflow for a signed integer" />
+<meta property="og:site_name" content="InterviewBit" />
+<meta property="og:site" content="InterviewBit" />
+<link rel="canonical" href="https://www.interviewbit.com/problems/rearrange-array/" />
+
+  <link rel="icon" type="image/png" href="https://dajh2p2mfq4ra.cloudfront.net/assets/favicon-9414372d0345a6e17040ae77f41c1c5fc151f5dc7cd6c63d9887cfef8552734a.png.gz">
+  <!--<link rel="manifest" href="/gcm-manifest.json">-->
+  <meta property="fb:app_id" content="314158428787536" />
+  <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>-->
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://dajh2p2mfq4ra.cloudfront.net/assets/html5shiv-d3d35aa8c5c7074d41080b04f1324ad142a05add2f6e1e2ac7028b1eb3bece66.js.gz" media="all"></script>
+  <script src="https://dajh2p2mfq4ra.cloudfront.net/assets/respond-ae5428486bdee38011f728bb50bde8cfdd6086d35010e7cd17a6841ee794ea47.js.gz" media="all"></script>
+  <![endif]-->
+
+  <script></script>
+  <link rel="stylesheet" media="all" href="https://dajh2p2mfq4ra.cloudfront.net/assets/web/application-32f55aa75f7c1ab6f11db32d7566e61de3a8f9ac8ef0e3888e86cb8475e11b83.css.gz" />
+  <link rel="stylesheet" media="all" href="https://dajh2p2mfq4ra.cloudfront.net/assets/web/problems-7524ca3d5bed4c9ee89def0219c23c749a87f4c71d3fabef802bfdd61c732caa.css.gz" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="dmVUygZ3cvnFcwo7+Bth6eCpIHWnbbxfFfYOjK4z/JdhVvjKquvwwMyJFe7z42b/EJ7WmcGloZq1tWbWlZ30eg==" />
+</head>
+<body>
+<nav class="navbar navbar-inverse mit-header navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">
+        InterviewBit <span style="margin-left:5px;background-color:#B71C1C;padding:5px;border-radius:5px;">Beta</span>
+      </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse" style="background-color: #63b1c6;">
+
+      <div class="nav navbar-nav hidden-xs hidden-sm hidden-md">
+            <div class="navbar-form form-group pull-left" role="search">
+            <form action="/search/" accept-charset="UTF-8" method="get">
+                <div class="input-group">
+                <select class="multi-keyword-search form-control" style="width:24em;" name="q[]"></select>
+                <span class="input-group-btn">
+                <button class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+                </button>
+                </span>
+                </div>
+</form>            </div>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a data-toggle="tooltip" data-placement="bottom" title="Set/Test new problems and Earn" href="/contribute/" target="_blank">
+                <span class="glyphicon glyphicon-certificate"></span>
+                <span class="user-score header-items">Contribute</span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tooltip" data-placement="bottom" title="Go To Puzzle Problems" href="/courses/programming/topics/puzzles/">
+                <span class="glyphicon glyphicon-flag"></span>
+                <span class="puzzle-problems header-items">Puzzles</span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="tooltip" data-placement="bottom" title="Total Score: 13408">
+                <span class="glyphicon glyphicon-flash"></span>
+                <span class="user-score header-items">13408</span>
+              </a>
+            </li>
+
+            <li id="coin-balance">
+              <a data-toggle="tooltip" data-placement="bottom" title="50 Coins" href="/store_items/">
+                <span class="glyphicon glyphicon-record"></span>
+                <span class="header-items">50</span>
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a id="nav-dLabel" data-target="#" href="/settings" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" role="button" aria-expanded="false">
+                rsubbu55
+                <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="nav-dLabel">
+                <li><a href="/profile/rsubbu55">Profile</a></li>
+
+                <li><a href="/settings/">Settings</a></li>
+                <li><a href="/chat/" >Chat</a></li>
+                <li><a href="/help_requests/">Help Requests</a></li>
+
+                <li><a href="/invite/?ref=header_menu">Invite Friends</a></li>
+                <li><a href="/referrals/?ref=header_menu">Referrals</a></li>
+                <li class="divider hidden-xs"></li>
+                <li><a href="/users/sign_out/" data-method="delete" rel="nofollow">Log Out</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/notifications/" id="header-notifications" class="notification" data-container="body" data-toggle="popover"
+                 data-placement="bottom"
+                 data-html="true"
+                 data-content='    <div id="notification-loading">
+        <img src="https://dajh2p2mfq4ra.cloudfront.net/assets/ajax-loader-339f23e664342615d7ffb8dee10449b51b1fc245031eea23a4e5b00e255326e0.gif.gz" alt="Ajax loader 339f23e664342615d7ffb8dee10449b51b1fc245031eea23a4e5b00e255326e0.gif" />
+    </div>
+'
+                 data-trigger="focus"
+                 data-template='<div class="popover notification-popover" role="tooltip"><div class="arrow"></div><h3 class="popover-title"></h3><div class="popover-content"></div></div>'>
+                <span class="glyphicon glyphicon-bell"></span>
+              </a>
+            </li>
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class='notifications top-right'></div>
+<div class='notifications top-left'></div>
+<div class='notifications bottom-right'></div>
+<div class='notifications bottom-left'></div>
+
+<div class="container">
+  <div class="col-xs-12" style="padding-right: 0px;">
+    
+    <div class="alert alert-danger" role="alert" id="javascript_not_loaded">
+Oops!! It seems some javascript files did not load. Please hard reload(SHIFT + reload) your page.
+ </div>
+
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="col-xs-12">
+      <ol class="breadcrumb" style="margin-bottom: 20px;">
+  <span class="glyphicon glyphicon-circle-arrow-left pull-left" style="margin-right: 10px;"></span>
+          <li><a href="/courses/programming">Programming</a></li>
+          <li><a href="/courses/programming/topics/math/">Math</a></li>
+      <li class="active">Rearrange Array</li>
+</ol>
+
+      <div class="row">
+        <div id="problem-box" class="col-xs-12 col-md-9">
+          <div class="panel panel-default gray problem-statement">
+                <div class="panel-heading">
+                  <h1 class="panel-title pull-left">Rearrange Array</h1>
+                      <button id="add-bookmark"
+                         data-add-bookmark-url="/courses/1/topics/3/problems/rearrange-array/add-bookmark/"
+                         data-remove-bookmark-url="/courses/1/topics/3/problems/rearrange-array/remove-bookmark/"
+                         data-bookmarked="false" class="pull-right btn btn-success bm-green" data-toggle="tooltip" data-placement="bottom"  title="Add to bookmarks (can be accessed from dashboard)">
+                        Bookmark </button>
+                      <button id="suggest-edits" style="margin-right: 10px"
+                              class="pull-right btn btn-default" data-suggest-edits-url = "/courses/1/topics/3/problems/rearrange-array/suggest-edits/"
+                              data-toggle="tooltip" data-placement="bottom" title="Suggest edits in problem statement." >
+                        Suggest Edit</button>
+                  <div class="clearfix"></div>
+                </div>
+            <div class="panel-body">
+                  <div id="problem-content" class="markdown-content">
+                    <p>Rearrange a given array so that <code class="highlighter-rouge">Arr[i]</code> becomes <code class="highlighter-rouge">Arr[Arr[i]]</code> with <code class="highlighter-rouge">O(1)</code> extra space.</p>
+
+<p><strong>Example:</strong></p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Input : [1, 0]
+Return : [0, 1]
+</code></pre>
+</div>
+
+<blockquote>
+  <p>Lets say <code class="highlighter-rouge">N</code> = <code class="highlighter-rouge">size of the array</code>. Then, following holds true :<br />
+* <strong>All elements in the array are in the range <code class="highlighter-rouge">[0, N-1]</code></strong><br />
+* <strong><code class="highlighter-rouge">N * N</code> does not overflow for a signed integer</strong></p>
+</blockquote>
+
+                  </div>
+                  <div style="display: inline-block; float:right " data-toggle="tooltip" data-placement="top" title="It is recommended during an interview to clear all your doubts with the interviewer. Therefore we do not provide all the test cases">
+                    <button class="btn btn-success pull-right" data-toggle="modal" data-target="#check-output-modal">See Expected Output</button>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-3">
+          <div class="panel panel-default hint-panel" id="notes-panel">
+  <div class="panel-heading">
+    <h3 class="panel-title pull-left">Notes</h3>
+        <a href="/profile/rsubbu55//notes/?ref=problem-page" class="pull-right">All Notes</a>
+    <span class="clearfix"></span>
+  </div>
+
+  <form id="notes-form" action=/courses/1/topics/3/problems/268/save-notes/  >
+    <input type="hidden" name="notes_content" id="hidden_notes"/>
+    <div style="position: relative;">
+      <textarea id="noteseditor" class="form-control" name="note"></textarea>
+      <input type="hidden" class="btn btn-info" value="Save" id="notes-save-btn" data-url="/courses/1/topics/3/problems/rearrange-array/save-notes/"/>
+    </div>
+  </form>
+
+</div> </div>
+
+        <div class="col-xs-12  col-md-9">
+              <div class="panel panel-default problem-time-counter">
+                <div class="panel-body">
+                    Time to Solve: 6 hours +  / Average Solving Time: 44 min.
+                  <div class="pull-right">
+                        <div style="display: inline-block; margin-right: 20px">
+                          Your Score: <span>76</span>
+                        </div>
+
+                    <div style="display: inline-block" data-toggle="tooltip" data-placement="top" title="Score awarded is a function of total time taken, wrong submissions and hint accessed">
+                      Max Score: 250
+                      <span class="glyphicon timer-icon glyphicon-info-sign" style="margin-left: 10px"></span></div>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+  <div class="panel-body" id="status-ht"></div>
+  <ul class="list-group" id="status-ct"></ul>
+</div>
+
+<form class="edit_problem" id="edit_problem_268" action="/courses/1/topics/3/problems/rearrange-array/submit-solution/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="aLfbZpviMOI8Lt2c5OkqIdVrmRTa7HAsQN6fHuv2XEJ/hHdmN36y2zXUwknvES03JVxv+LwkbengnfdE0FhUrw==" />
+    <input type="hidden" name="submission_content" id="hidden_code"/>
+    <input type="hidden" name="submission_type" id="submission_type"/>
+    <input type="hidden" name="custom_input" id="custom_input"/>
+    <input type="hidden" name="test_id" value=""/>
+
+    <div id="code_editor_wrapper" class="panel panel-default code-editor " style="display:flex;">
+      <div id='sidebar-wrapper'  style="background-color:#5bc0de;height:100%;color:white;width:5%;">
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="problem_statement" title ="Show Problem statement" class="collapsable_icons"><i class="fa fa-file-text" aria-hidden="true"></i></div>
+        <div  id="problem_hint"  title ="Show hint"  class="collapsable_icons"><i class="fa fa-lightbulb-o" aria-hidden="true"></i></div>
+        <div  id="toggle_notes_panel" title ="Show notes panel"  class="collapsable_icons_note active" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+      </div>
+      <div id="collapsable-wrapper">
+        <div class="col-xs-12">
+          <div id="close_collapsable_content"><i  class="fa fa-times-circle-o" aria-hidden="true"></i></div>
+          <div id="collapsable_content"></div>
+        </div>
+      </div>
+      <div id="main-content-wrapper" style="flex-grow:1;">
+        <div class="problem-time-counter" style="padding: 5px 10px;box-shadow: none;border-radius: 0px;" id='problem-time-counter-full'>
+          <div>
+              Time to Solve: 6 hours +  / Average Solving Time: 44 min.
+            <div class="pull-right">
+                  <div style="display: inline-block; margin-right: 20px">
+                    Your Score: <span>76</span>
+                  </div>
+
+              <div style="display: inline-block" data-toggle="tooltip" data-placement="bottom" title="Score awarded is a function of total time taken, wrong submissions and hint accessed">
+                Max Score: 250
+                <span class="glyphicon timer-icon glyphicon-info-sign" style="margin-left: 10px"></span></div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        
+
+      <div class="panel-heading">
+        <!--div class="pull-left" style="line-height: 32px; margin-left: 2.2em">
+          <span style="margin-right: 1.1em">Time Limit: <span id="time-limit"></span> Sec</span>
+          <span style="margin-left: 1.1em">Memory Limit: <span id="memory-limit"></span> MB</span>
+        </div-->
+
+        <div class="pull-left">
+          <select class="form-control" name="editor_theme_name" id="select-editor-theme">
+                <option value="monokai" selected>monokai</option>
+                <option value="terminal" >terminal</option>
+                <option value="chrome" >chrome</option>
+                <option value="xcode" >xcode</option>
+          </select>
+        </div>
+
+        <div class="pull-right">
+          <input type="button"
+                 id="seek-help"
+                 style="padding: 6px 15px; margin-left: 12px;"
+                 class="btn btn-success"
+                 value="Seek Help"
+                  
+                 title=""
+                 data-enabled = true
+          >
+          <span class="glyphicon timer-icon glyphicon-info-sign" style="margin-left: 10px"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                title="Seeking help costs 10 coins."></span>
+                <a id="fullScreenToggle" onclick='fullScreenToggle()' title="Switch to fullscreen editor." style="font-size: 18px;color: #cccccc;margin-left: 10px;background-color:white;border:none;cursor:pointer">
+                       <i class="fa fa-arrows-alt" aria-hidden="true"></i>
+                </a>
+
+        </div>
+
+        <div class="pull-right">
+          <select class="form-control" name="programming_language_id" id="select-language">
+                <option value="11" >C (gcc-4.8)</option>
+                <option value="44" selected>C++11 (gcc-4.8)</option>
+                <option value="4" >Python (python-2.7)</option>
+                <option value="511" >Java 8 (oracle-jdk-1.8)</option>
+          </select>
+        </div>
+
+        <div class="clearfix"></div>
+      </div>
+      <div style="position: relative;" id="editor_wrapper">
+        <textarea id="editor" class="form-control" rows="18" name="code">void Solution::arrange(vector&lt;int&gt; &amp;A) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    for (int i=0; i&lt;A.size(); ++i) {
+        A[i] = A[i] + (A[A[i]] % A.size()) * A.size();
+    }
+    for (int i=0; i&lt;A.size(); ++i) {
+        A[i] = A[i]/A.size();
+    }
+}
+</textarea>
+      </div>
+      <div class="panel-footer">
+        <div class="btn-group">
+          <input type="button" class="btn btn-info" value="Save" id="problem-save-btn" data-url="/courses/1/topics/3/problems/rearrange-array/save-solution/?ib_test_session_id=false"/>
+          <input type="button" class="btn btn-danger" value="Reset" id="problem-reset-btn" data-url="/courses/1/topics/3/problems/rearrange-array/delete-solution/?ib_test_session_id=false" />
+        </div>
+        <span id="action_message" style="margin-left: 15px"></span>
+        <div class="btn-group pull-right dropup">
+          <input type="submit" class="action_submit btn btn-danger  "
+                 value="Submit" data-toggle="tooltip" data-placement="top"
+                 title="Wrong submission have a score penalty. We recommend testing your code before submitting"
+                 />
+          <button class="btn btn-info dropdown-toggle btn-large" data-toggle="dropdown" aria-expanded="false" style="box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+                            border: 0;
+                            border-radius: 0px 5px 5px 0px;
+                            text-align: center;
+                            width: 110px;">Test
+            <span class="caret"></span>
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+
+          <ul class="dropdown-menu" role="menu">
+            <li>
+              <a id="test-custom-input" href="#" data-toggle="modal" data-target="#custom-input-modal"><button class="btn btn-info" />Test with custom input</button></a>
+              <a  href="#" ><input type="submit" class="btn btn-info action_submit" value="Test" style="width: 100%;"/></a>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+</form>
+<div class="modal fade" id="custom-input-modal" tabindex="-1" role="dialog" aria-labelledby="Enter Custom Input" aria-hidden="true">
+  <div class="modal-dialog">
+    <form id="custom-input-form">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <span class="modal-title" id="myModalLabel"><strong>Enter your input as per the following guideline:</strong></span>
+          <div>
+            <pre style="word-wrap: normal">There are 1 lines in the input
+
+Line 1 ( Corresponds to arg 1 ) : An integer array. First number is the size S of the array. Then S numbers follow which indicate the elements in the array.
+    For example, Array: [1, 2, 6] will be written as &quot;3 1 2 6&quot;(without quotes).
+
+</pre>
+            <div><span style="font-weight: bold;">Note:</span> If you are getting correct answer with custom input but not on submitting,
+              most likely you are using global variables or are accessing invalid memory locations.</div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <textarea class="form-control" rows="5" name="custom_input" id="custom_input_textarea"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="closemodal" type="submit" class="btn btn-default action_submit" value="Custom"> Test </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="modal fade" id="check-output-modal" tabindex="-1" role="dialog" aria-labelledby="Enter Your Input" aria-hidden="true">
+  <div class="modal-dialog">
+
+    <form class="new_ask_interviewer" id="new_ask_interviewer" action="/courses/1/topics/3/problems/268/see-expected-output/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="K3XrRahgm+DnumbHg1ouF22FbkrrEI+w6KUVHuKxZ/Y8RkdFBPwZ2e5AeRKIoikBnbKYpo3YknVI5n1E2R9vGw==" />
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <span class="modal-title" id="myModalLabel"><strong>Enter your input as per the following guideline:</strong></span>
+          <div>
+            <pre style="word-wrap: normal">There are 1 lines in the input
+
+Line 1 ( Corresponds to arg 1 ) : An integer array. First number is the size S of the array. Then S numbers follow which indicate the elements in the array.
+    For example, Array: [1, 2, 6] will be written as &quot;3 1 2 6&quot;(without quotes).
+
+</pre>
+          </div>
+        </div>
+        <div class="modal-body">
+          <textarea class="form-control" rows="5" name="input" id="custom_input_textarea"></textarea>
+          <div class="pull-right" >
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button id="see-output-btn" type="submit" class="btn btn-primary" value="Custom"> See Expected Output </button>
+
+        </div>
+
+      </div>
+
+</form>  </div>
+</div>
+
+
+    <div class="modal fade" id="fb-share-modal" tabindex="-1" role="dialog" aria-labelledby="Share" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <div class="modal-body">
+            <blockquote>
+              <p class="text-info"> rsubbu55, you have worked hard and deserve a pat on the back. <br>
+                Share your achievement on facebook, and let your friends know that you're <em>killing it</em> here on <strong>InterviewBit</strong>!
+              </p>
+            </blockquote>
+          </div>
+          <div class="modal-footer">
+            <div class="pull-left" id="fb-share-button"></div>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" autocomplete="off" id="disable-share"> Don't show this again
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<div class="modal fade" id="seek_help_modal" data-remote="/help_requests/new/?problem_id=268">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+    </div>
+  </div>
+</div>
+
+
+
+        </div>
+        <div class="col-xs-12 col-md-3">
+          <div class="panel panel-default">
+            <ul class="list-group">
+              <li class="list-group-item">
+                <a class="btn btn-info btn-lg btn-block" href="/courses/1/topics/3/problems/rearrange-array/previous_submissions/">Previous Submissions</a>
+
+              </li>
+            </ul>
+          </div>
+              <div class="panel panel-default hint-panel" id='hint-panel'>
+                <div class="panel-heading">
+                  <span class="panel-title"><strong>Hints</strong></span>
+                </div>
+                <ul class="list-group hint-list" data-toggle="modal" data-target="#sign-up-modal">
+                        <li data-less-score="50" class="list-group-item accessed-hint">
+                          <a href="/courses/1/topics/3/problems/rearrange-array/hints/518/">Solution Approach</a>
+
+                            <i class="pull-right fa fa-unlock-alt glyphicon-info" style="font-size: 22px"></i>
+                      </li>
+                        <li data-less-score="100" class="list-group-item accessed-hint">
+                          <a href="/courses/1/topics/3/problems/rearrange-array/hints/519/">Complete Solution</a>
+
+                            <i class="pull-right fa fa-unlock-alt glyphicon-info" style="font-size: 22px"></i>
+                      </li>
+                </ul>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Similar Problems</h3>
+                </div>
+                <ul class="list-group">
+                        <li class="list-group-item">
+                          <a href="/problems/numbers-of-length-n-and-value-less-than-k/?ref=similar_problems"
+                             data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;87&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?"
+                             data-defer-access="true">
+                            Numbers of length N and value less than K
+                          </a>
+                        </li>
+                        <li class="list-group-item">
+                          <a href="/problems/excel-column-title/?ref=similar_problems"
+                             data-warn-msg="Average time taken to solve this problem is &lt;span class=&#39;time-to-solve&#39;&gt;35&lt;/span&gt; minutes. The quicker you solve the problem, the higher the score. Ready to start?"
+                             data-defer-access="true">
+                            Excel Column Title
+                          </a>
+                        </li>
+                </ul>
+              </div>
+              <div class="panel panel-success successful-submissions">
+                <div class="panel-body">
+                  <span class="submission-count">12183</span> successful submissions.
+                </div>
+              </div>
+
+                  <div class="panel panel-default social-rank-panel problem-page-fb-connect">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Discuss Solution!</h3>
+                      </div>
+                      <div class="panel-body blur-frnds-list problem">
+                        <div class="fb-connect-msg">Find your friends who have solved this problem.</div>
+                        <a href="/users/auth/facebook/"  rel="nofollow">
+                          <img src="https://dajh2p2mfq4ra.cloudfront.net/assets/fb-btn-0c4e0d33378a717047c058f081179b80b9dd4a884d6462ecbfac1b2d44907620.png.gz" alt="Connect with facebook" class="connect-fb-btn"/>
+                        </a>
+                      </div>
+                  </div>
+
+              <div class="panel-group">
+                <div class="panel panel-default company-panel">
+                  <div class="panel-heading">
+                    <span class="panel-title"><strong>Asked In:</strong></span>
+                  </div>
+
+                  <ul class="list-group">
+                        <li class="list-group-item">Facebook</li>
+                  </ul>
+                </div>
+              </div>
+        </div>
+      </div>
+      <div class="row">
+            <div id="problem_comment">
+              <div role="tabpanel">
+                <ul class="nav nav-tabs " role="tablist">
+                  <li role="presentation" class="active"><a href="#fb-comments-unsolved" aria-controls="fb-comments-unsolved" role="tab" data-toggle="tab">Problem Discussion</a></li>
+                  <li role="presentation"><a href="#fb-comments-solved" aria-controls="fb-comments-solved" role="tab" data-toggle="tab">Solution Discussion</a></li>
+                </ul>
+
+                <div class="tab-content">
+                  <div role="tabpanel" class="tab-pane fade in active" id="fb-comments-unsolved">
+                    <span class="problem_comment_header">
+                      This thread is for people who have not yet solved the problem. Please do not post solutions here.
+                    </span>
+                    <div class="fb-comments"
+                         data-href="http://www.interviewbit.com/comment/cacc41618c591f9d60267948ad887259"
+                         data-width="100%"></div>
+                  </div>
+                  <div role="tabpanel" class="tab-pane fade" id="fb-comments-solved">
+                    <span class="problem_comment_header">
+                      This thread is for people who have solved the problem. You may discuss your solutions here.
+                    </span>
+                        <div class="fb-comments"
+                             data-href="http://www.interviewbit.com/comment/e4ba279cbdc37edbdca970983aef0040"
+                             data-width="100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <div class="panel panel-default adblck-warn hidden" style="margin-top: 20px">
+          <div class="panel-body">
+            There used to be a comment thread here.
+            <wbr>
+            But it seems you have ad block turned on.
+            <wbr>
+            We do not display ads on this site
+            <wbr>
+            and disabling ad block will improve your experience.
+          </div>
+        </div>
+      </div>
+
+      <div id="help_button" class="btn btn-default hidden">
+        <a id="help_anchor" href="/chat/" target="_blank">
+          <span class="glyphicon glyphicon-comment"></span>
+          <span id="help_text">Need Help?</span>
+        </a>
+      </div>
+  </div>
+</div>
+
+
+<section id="footer" class="section">
+  <div class="container">
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="/pages/about_us/">About Us</a></li>
+        <li><a href="/pages/faq/">FAQ</a></li>
+        <li><a href="/pages/contact_us/">Contact Us</a></li>
+        <li><a href="/pages/terms/">Terms</a></li>
+        <li><a href="/pages/privacy/">Privacy Policy</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" id="footer-pages">
+      <ul class="list-inline">
+        <li><a href="/courses/system-design/">System Design Questions</a></li>
+        <li><a href="/problems/google-interview-questions">Google Interview Questions</a></li>
+        <li><a href="/problems/facebook-interview-questions">Facebook Interview Questions</a></li>
+        <li><a href="/problems/amazon-interview-questions">Amazon Interview Questions</a></li>
+        <li><a href="/problems/microsoft-interview-questions">Microsoft Interview Questions</a></li>
+      </ul>
+    </div>
+    <div class="row text-center" style="margin-top: 10px" id="footer-social">
+        <ul class="list-inline">
+          <li>
+            <a target="_blank" href="https://www.facebook.com/interviewbit">
+              <i class="fa fa-facebook"></i>
+              <span style="padding-left: 8px">Like Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://twitter.com/interview_bit">
+              <i class="fa fa-twitter"></i>
+              <span style="padding-left: 8px">Follow Us</span>
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="mailto:hello@interviewbit.com">
+              <i class="fa fa-envelope-o"></i>
+              <span style="padding-left: 8px">Email</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<script type="text/x-template" id="global-modal-template">
+<div class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">Info</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer">
+                
+            </div>
+        </div>
+    </div>
+</div>
+</script>
+    
+<div class="feedback-box">
+  <div class="beta-phase" data-toggle="modal" data-target="#feedbackmodal">
+    <i>
+      <svg viewBox="0 0 50 50" enable-background="0 0 50 50">
+        <path class="fill" d="M25.5,13c-4.7,0-8.5,3.8-8.5,8.5c0,4.7,3.8,8.5,8.5,8.5c4.7,0,8.5-3.8,8.5-8.5C34,16.8,30.2,13,25.5,13z M26,29v-3.3l0.6,0.6c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l1.5-1.5c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0L27,25.3l-1.1-1.1c0,0-0.1-0.1-0.2-0.1c-0.1-0.1-0.3-0.1-0.4,0c-0.1,0-0.1,0.1-0.2,0.1L24,25.3l-0.9-0.9c-0.2-0.2-0.5-0.2-0.7,0s-0.2,0.5,0,0.7l1.2,1.2c0.2,0.2,0.5,0.2,0.7,0l0.6-0.6V29c-3.9-0.3-7-3.5-7-7.5c0-4.1,3.4-7.5,7.5-7.5s7.5,3.4,7.5,7.5C33,25.5,29.9,28.7,26,29z"/>
+        <path class="fill" d="M28,31h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,32,23,32h5c0.3,0,0.5-0.2,0.5-0.5S28.3,31,28,31z"/>
+        <path class="fill" d="M28,33h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,34,23,34h5c0.3,0,0.5-0.2,0.5-0.5S28.3,33,28,33z"/>
+        <path class="fill" d="M28,35h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,36,23,36h2v0.5c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V36h2c0.3,0,0.5-0.2,0.5-0.5S28.3,35,28,35z"/>
+      </svg>
+    </i>
+    We are in beta! We would love to hear your feedback.
+  </div>
+  <div class="beta-phase">
+    <a style="color: #ffffff;" target="_blank" href="http://www.quora.com/What-is-your-review-of-InterviewBit">
+        <i>
+          <svg viewBox="0 0 50 50" enable-background="0 0 50 50">
+            <path class="fill" d="M25.5,13c-4.7,0-8.5,3.8-8.5,8.5c0,4.7,3.8,8.5,8.5,8.5c4.7,0,8.5-3.8,8.5-8.5C34,16.8,30.2,13,25.5,13z M26,29v-3.3l0.6,0.6c0.1,0.1,0.2,0.1,0.4,0.1s0.3,0,0.4-0.1l1.5-1.5c0.2-0.2,0.2-0.5,0-0.7s-0.5-0.2-0.7,0L27,25.3l-1.1-1.1c0,0-0.1-0.1-0.2-0.1c-0.1-0.1-0.3-0.1-0.4,0c-0.1,0-0.1,0.1-0.2,0.1L24,25.3l-0.9-0.9c-0.2-0.2-0.5-0.2-0.7,0s-0.2,0.5,0,0.7l1.2,1.2c0.2,0.2,0.5,0.2,0.7,0l0.6-0.6V29c-3.9-0.3-7-3.5-7-7.5c0-4.1,3.4-7.5,7.5-7.5s7.5,3.4,7.5,7.5C33,25.5,29.9,28.7,26,29z"/>
+            <path class="fill" d="M28,31h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,32,23,32h5c0.3,0,0.5-0.2,0.5-0.5S28.3,31,28,31z"/>
+            <path class="fill" d="M28,33h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,34,23,34h5c0.3,0,0.5-0.2,0.5-0.5S28.3,33,28,33z"/>
+            <path class="fill" d="M28,35h-5c-0.3,0-0.5,0.2-0.5,0.5S22.7,36,23,36h2v0.5c0,0.3,0.2,0.5,0.5,0.5s0.5-0.2,0.5-0.5V36h2c0.3,0,0.5-0.2,0.5-0.5S28.3,35,28,35z"/>
+          </svg>
+        </i>
+        Loved InterviewBit? Write us a testimonial.
+    </a>
+  </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="feedbackmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Your feedback is important to help us improve.</h4>
+      </div>
+      <form class="form" id="feedback-form" action="/feedback/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LKBK/A/inIZ+fFrxbDhlG2o8NTv4aZiWSny1P7aqzMk7k+b8o34ev3eGRSRnwGINmgvD156hhVPqP91ljQTEJA==" />
+        <input type="hidden" name="referer_url" value=https://www.interviewbit.com/problems/rearrange-array/ >
+        <div class="modal-body">
+          <div class="success-msg alert alert-notice alert-dismissible hidden"></div>
+          <div class="form-group">
+            <label for="content">Feedback</label>
+            <textarea required="" rows="6" class="form-control" id="content" name="content" placeholder="Your question or comment here"></textarea>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div class="form-group">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Submit Feedback</button>
+          </div>
+        </div>
+</form>    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<script src="https://dajh2p2mfq4ra.cloudfront.net/assets/web/application-4b1c493e643eb4cffd642470bea485510223fd335a40644fb95d4205d746236a.js.gz" crossorigin="anonymous"></script>
+<script src="https://dajh2p2mfq4ra.cloudfront.net/assets/web/problems-1f790454863e4903d60faad4c5be812ea0ebe5c0ce98294dec916b2f362ab645.js.gz" crossorigin="anonymous"></script>
+    <script>
+        $('#check-output-modal').on('shown.bs.modal', function(){
+            if($('#see-output-btn').attr('data-recaptcha-widget-id')){
+                grecaptcha.reset($('#see-output-btn').attr('data-recaptcha-widget-id'))
+            } else{
+                $('#see-output-btn').attr('data-recaptcha-widget-id', grecaptcha.render('g-recaptcha',{'sitekey' : '6Lf3ngcTAAAAAAc199lejBXaJ5ZQbLp6MXHoRgWj'}));
+            }
+        });
+
+        $("#new_ask_interviewer ").on('submit',function(){
+            var that = this;
+
+            $.loader({
+                className: "blue-with-image-2",
+                content: 'Loading'
+            });
+
+            $.ajax({
+                url: $(this).attr('action'),
+                data: $(this).serialize(),
+                type: $(this).attr('method'),
+                success: function(resp){
+
+                    if(resp.success){
+                        var timer = setInterval(function(){
+                            $.ajax({
+                                url: "/courses/1/topics/3/problems/268/get-expected-output/" + "?ask_interviewer_id=" + resp.ai_id ,
+                                success: function(resp){
+                                    if(resp.status !== 0){
+                                        clearInterval(timer);
+                                        $.loader('close');
+                                        if(resp.status === 256){
+                                            $("#check-output-modal").modal('hide');
+                                            $.bootModal({
+                                                message: "Your Input: " + resp.input + " <br />Expected output is " + resp.output,
+                                                buttons: [{
+                                                    btnAction: 'close',
+                                                    btnText: "OK"
+                                                }]
+                                            });
+                                        }else{
+                                            $.bootModal({
+                                                message: "Invalid input format OR invalid test case.",
+                                                buttons: [{
+                                                    btnAction: 'close',
+                                                    btnText: "OK"
+                                                }]
+                                            });
+                                        }
+                                    }
+
+                                }
+                            });
+                        }, 2000);
+                    }
+                    else{
+                        $.loader('close');
+                        $.bootModal({
+                            message: "There was an error with the recaptcha code below. Please re-enter the code.",
+                            buttons: [{
+                                btnAction: 'close',
+                                btnText: 'Ok'
+                            }]
+                        });
+                    }
+                },
+                error: function(){
+                  $.bootModal({
+                    message: 'Something went wrong. Please try again in some time.',
+                    buttons: [{
+                        btnAction: 'close',
+                        btnText: 'Ok'
+                    }]
+                  });
+                }
+            });
+            return false;
+        });
+    </script>
+  <script>
+
+  </script>
+    <script>
+        myinterviewtrainer.problem.submit.init({
+            problem_id: 268,
+            getCodeUrl: "/courses/1/topics/3/problems/rearrange-array//get_last_submission",
+            ib_test_session_id: false
+        });
+        myinterviewtrainer.problem.seek_help.init({
+            can_seek_help: true
+        });
+
+        if (false){
+          $('#sidebar-wrapper').css('display','none');
+          $('#collapsable-wrapper').css('display','none');
+          $('#problem-time-counter-full').css('display','none');
+        }
+
+        myinterviewtrainer.problem.editor.makeScreenSmall = function(){
+          $('#code_editor_wrapper').css({position: 'relative',top: '0px',height: '100%',width: '100%',left: '0px','z-index': '1'});
+          myinterviewtrainer.problem.editor.setOptions({ minLines:20});
+          $('#sidebar-wrapper').css('display','none');
+          $('#collapsable-wrapper').css('display','none');
+          $('#problem-time-counter-full').css('display','none');
+          $('.collapsable_icons').removeClass('active');
+          $('#toggle_notes_panel').removeClass('active');
+          var notes_height = $('#problem-box').height();
+          $('#notes-panel').css({position: 'relative',height:(notes_height-20),'z-index': '1',width:'auto',right:'0px'});
+          $('.panel-footer').css({position: 'relative','z-index': '1',width:'100%'});
+        }
+
+        myinterviewtrainer.problem.editor.makeScreenBig = function(){
+          $('#notes-panel').css({position: 'fixed',height: '500px','z-index': '1000',right:'40px',width:'250px'});
+          $('#code_editor_wrapper').css({position: 'fixed',top: '0px',height: '100%',width: '100%',left: '0px','z-index': '999','display':'flex'});
+            var lines = Math.round((window.innerHeight - 98) / 16);
+            $('#sidebar-wrapper').css('display','block');
+            $('#toggle_notes_panel').addClass('active');
+            console.log(lines);
+            myinterviewtrainer.problem.editor.setOptions({ minLines:lines,maxLines:lines});
+            $('#problem-time-counter-full').css('display','block');
+            $('.collapsable_icons').removeClass('active');
+            $('.panel-footer').css({position: 'fixed','z-index': '10',width:'95%',bottom:'0px'});
+            if (false){
+              $('#problem-time-counter-full').css('display','none');
+            }
+        }
+
+
+        $('#problem_statement').click(function(target){
+          if ( $('#problem_statement').hasClass('active') ){
+            $('#collapsable-wrapper').css('display','none');
+            $('.collapsable_icons').removeClass('active');
+            $('#problem_statement').attr('title','Show problem statement');
+            $('.panel-footer').css({position: 'fixed','z-index': '10',width:'95%',bottom:'0px'});
+          }else{
+          $('.collapsable_icons').removeClass('active');
+          $('.panel-footer').css({position: 'fixed','z-index': '10',width:'65%',bottom:'0px'});
+          console.log('statement');
+          $('#collapsable-wrapper').css('display','block');
+          var html = $('#problem-content').html();
+          $('#collapsable_content').html(html);
+          $('#problem_statement').addClass('active');
+          $('#problem_statement').attr('title','Hide problem statement');
+        }
+
+        });
+        $('.action_submit').click(function(){
+          myinterviewtrainer.problem.editor.makeScreenSmall();
+        })
+
+        $('#problem_hint').click(function(){
+
+          if ( $('#problem_hint').hasClass('active') ){
+            $('#collapsable-wrapper').css('display','none');
+            $('.collapsable_icons').removeClass('active');
+            $('#problem_hint').attr('title','Show hint');
+            $('.panel-footer').css({position: 'fixed','z-index': '10',width:'95%',bottom:'0px'});
+          }else{
+          $('.panel-footer').css({position: 'fixed','z-index': '10',width:'65%',bottom:'0px'});
+          $('.collapsable_icons').removeClass('active');
+          $('#collapsable-wrapper').css('display','block');
+          $('#collapsable-wrapper').css('display','block');
+          var html = $('#hint-panel').children().clone(true);
+          $('#collapsable_content').html(html);
+          $('#problem_hint').addClass('active');
+          $('#problem_hint').attr('title','Hide hint');
+          }
+        });
+
+        $('#toggle_notes_panel').click(function(){
+            if(  $('#notes-panel').css('position') == 'fixed'){
+              var notes_height = $('#problem-box').height();
+              $('#notes-panel').css({position: 'relative',height:(notes_height-20),'z-index': '1',width:'auto',right:'0px'});
+              $('.collapsable_icons_note').removeClass('active');
+              $('#toggle_notes_panel').attr('title','Show notes panel');
+            } else{
+                $('#notes-panel').css({position: 'fixed',height: '500px','z-index': '1000',right:'40px',width:'250px'});
+                $('#toggle_notes_panel').addClass('active');
+                $('#toggle_notes_panel').attr('title','Hide notes panel');
+            }
+        });
+
+        $('#close_collapsable_content').click(function(){
+            $('#collapsable-wrapper').css('display','none');
+            $('.collapsable_icons').removeClass('active');
+            $('.panel-footer').css({position: 'fixed','z-index': '10',width:'95%',bottom:'0px'});
+        });
+
+        var fullScreenToggle = function(target){
+          if($('#code_editor_wrapper').css('position') == 'fixed'){
+              myinterviewtrainer.problem.editor.makeScreenSmall();
+          } else {
+            myinterviewtrainer.problem.editor.makeScreenBig();
+          }
+        }
+
+        $(document).keyup(function(e) {
+          if (e.keyCode == 27) { // escape key maps to keycode `27`
+              myinterviewtrainer.problem.editor.makeScreenSmall();
+          }
+        });
+    </script>
+    <script>
+        $(function() {
+
+            $('#closemodal').click(function() {
+                $('#custom-input-modal').modal('hide');
+            });
+
+            $("#disable-share").change(function() {
+                var today = new Date();
+                today.setHours(0,0,0,0);
+                var flag = localStorage.getItem(today);
+                if (!flag) {
+                    localStorage.setItem(today, 1);
+                }
+                else {
+                    localStorage.setItem(today, 0);
+                }
+                });
+            });
+        $('body').delegate( '#failed-test-button','click',function(){
+            var failingInput = $(this).data('input')
+            $('#custom_input_textarea').val(failingInput);
+        });
+    </script>
+    <div id="fb-root"></div>
+<script type="text/javascript">
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=314158428787536&version=v2.3";
+js.onerror = function(){$(".adblck-warn").removeClass("hidden"); $("#problem_comment_header").addClass('hidden');};
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <script>myinterviewtrainer.keyword_search.init();</script>
+    <script>
+        $("body").delegate("#feedback-form", "submit", function(){
+            $form = $(this);
+            $('button[type=submit]', $form).attr('disabled', 'disabled');
+            $.loader({
+                className:"blue-with-image-2",
+                content:''
+            });
+            $.ajax({
+                url: $form.attr("action"),
+                data: $form.serialize(),
+                type: $form.attr("method"),
+                complete: function () {
+                    $.loader('close');
+                    $('button[type=submit]', $form).attr('disabled', false);
+                },
+                success: function(resp){
+                    if(resp.success){
+                        $(".success-msg", $form).hide().removeClass('hidden').html(resp.info).fadeIn('slow');
+                        $("#content", $form).val('');
+                    }else{
+                        alert('something went wrong. Please try again.');
+                    }
+
+                },
+                error: function(){
+                    alert('something went wrong. Please try again.');
+                }
+            });
+            return false;
+        });
+    </script>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-56207880-1', {'userId':'104898'});
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+
+
+    <script>
+        $(function(){
+            myinterviewtrainer.common.fetch_notification_count();
+        });
+    </script>
+</body>
+</html>

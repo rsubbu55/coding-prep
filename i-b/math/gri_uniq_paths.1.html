@@ -1,0 +1,20 @@
+<div id='hint-type' data-hint-title="Solution Approach" 
+  data-suggest-edits-url = "/courses/1/topics/3/problems/grid-unique-paths/hints/174/suggest-edits/" 
+  data-does-edits="true"
+  data-hidden="true"></div>
+<div class="markdown-content">
+  <p>There is a mathematical approach to solving this problem.</p>
+
+<p>Note that you have to take <strong>m + n - 2</strong> steps in total. You have to take (m - 1) steps going down and (n-1) steps going right.</p>
+
+<p>Let 0 denote a down step and 1 denote a right step.</p>
+
+<p>So we need to find out the number of strings of length m + n - 2 which have exactly <strong>m - 1</strong> zeroes and <strong>n - 1</strong> ones.</p>
+
+<p>Essentially we need to choose the positions of ‘1s’, and then ‘0s’ fall into the remaining positions.</p>
+
+<p>So, the answer becomes Choose(m+n-2, n - 1).</p>
+
+</div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>

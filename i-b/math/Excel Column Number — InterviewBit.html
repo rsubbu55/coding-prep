@@ -1,0 +1,270 @@
+Toggle navigation InterviewBit Beta
+
+<https://www.interviewbit.com/>
+
+*
+
+  * Contribute
+
+    <https://www.interviewbit.com/contribute/>
+  * Puzzles
+
+    <https://www.interviewbit.com/courses/programming/topics/puzzles/>
+  * 13408
+
+  * 50
+
+    <https://www.interviewbit.com/store_items/>
+  * rsubbu55
+
+    <https://www.interviewbit.com/settings>
+      o Profile
+
+        <https://www.interviewbit.com/profile/rsubbu55>
+      o Settings
+
+        <https://www.interviewbit.com/settings/>
+      o Chat
+
+        <https://www.interviewbit.com/chat/>
+      o Help Requests
+
+        <https://www.interviewbit.com/help_requests/>
+      o Invite Friends
+
+        <https://www.interviewbit.com/invite/?ref=header_menu>
+      o Referrals
+
+        <https://www.interviewbit.com/referrals/?ref=header_menu>
+      o
+      o Log Out
+
+        <https://www.interviewbit.com/users/sign_out/>
+  *
+
+    <https://www.interviewbit.com/notifications/>
+
+ 1. Programming <https://www.interviewbit.com/courses/programming>
+ 2. Math <https://www.interviewbit.com/courses/programming/topics/math/>
+ 3. Excel Column Number
+
+
+  Excel Column Number
+
+Bookmark
+
+Suggest Edit
+
+Given a column title as appears in an Excel sheet, return its
+corresponding column number.
+
+*Example:*
+
+|    A -> 1
+    
+    B -> 2
+    
+    C -> 3
+    
+    ...
+    
+    Z -> 26
+    
+    AA -> 27
+    
+    AB -> 28 
+|
+
+See Expected Output
+
+
+      Notes
+
+All Notes
+
+<https://www.interviewbit.com/profile/rsubbu55//notes/?ref=problem-page>
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Time to Solve: 12 min. / Average Solving Time: 22 min.
+Your Score: 170
+Max Score: 175
+
+
+
+
+
+//
+//
+//
+//
+Time to Solve: 12 min. / Average Solving Time: 22 min.
+Your Score: 170
+Max Score: 175
+
+//
+
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+#include <cmath>
+int Solution::titleToNumber(string A) {
+    // Do not write main() function.
+    // Do not read input, instead use the arguments to the function.
+    // Do not print the output, instead return values as specified
+    // Still have a doubt. Checkout www.interviewbit.com/pages/sample_codes/ for more details
+    int col;
+    int p=0;
+    for (int i=A.size()-1; i>=0; --i) {
+        int c = A[i] - 'A'+1;
+        col += pow(26, p) * c;
+        p++;
+    }
+    return col;
+}
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Test Toggle Dropdown
+
+  * Test with custom input
+
+    <#>
+
+    <#>
+
+×
+
+*Enter your input as per the following guideline:*
+
+There are 1 lines in the input
+
+Line 1 ( Corresponds to arg 1 ) : A single string
+    For example, String: "HelloWorld" will be written as "HelloWorld"(without quotes).
+
+Note: If you are getting correct answer with custom input but not on
+submitting, most likely you are using global variables or are accessing
+invalid memory locations.
+Close Test
+
+×
+
+*Enter your input as per the following guideline:*
+
+There are 1 lines in the input
+
+Line 1 ( Corresponds to arg 1 ) : A single string
+    For example, String: "HelloWorld" will be written as "HelloWorld"(without quotes).
+
+Close See Expected Output
+
+    rsubbu55, you have worked hard and deserve a pat on the back.
+    Share your achievement on facebook, and let your friends know that
+    you're /killing it/ here on *InterviewBit*! 
+
+Close
+Don't show this again
+
+  * Previous Submissions
+
+    <https://www.interviewbit.com/courses/1/topics/3/problems/excel-column-number/previous_submissions/>
+
+
+*Hints*
+
+  * Solution Approach
+    <https://www.interviewbit.com/courses/1/topics/3/problems/excel-column-number/hints/167/>
+
+    /
+
+    /
+  * Complete Solution
+    <https://www.interviewbit.com/courses/1/topics/3/problems/excel-column-number/hints/168/>
+
+    /
+
+    /
+
+
+      Similar Problems
+
+  * Numbers of length N and value less than K
+    <https://www.interviewbit.com/problems/numbers-of-length-n-and-value-less-than-k/?ref=similar_problems>
+
+  * Excel Column Title
+    <https://www.interviewbit.com/problems/excel-column-title/?ref=similar_problems>
+
+
+15197 successful submissions.
+
+
+      Discuss Solution!
+
+Find your friends who have solved this problem.
+Connect with facebook <https://www.interviewbit.com/users/auth/facebook/>
+*Asked In:*
+
+  * Amazon
+
+  * Problem Discussion
+
+    <#fb-comments-unsolved>
+  * Solution Discussion
+
+    <#fb-comments-solved>
+
+This thread is for people who have not yet solved the problem. Please do
+not post solutions here.
+This thread is for people who have solved the problem. You may discuss
+your solutions here.
+There used to be a comment thread here. But it seems you have ad block
+turned on. We do not display ads on this site and disabling ad block
+will improve your experience.
+Need Help? <https://www.interviewbit.com/chat/>
+
+  * About Us <https://www.interviewbit.com/pages/about_us/>
+  * FAQ <https://www.interviewbit.com/pages/faq/>
+  * Contact Us <https://www.interviewbit.com/pages/contact_us/>
+  * Terms <https://www.interviewbit.com/pages/terms/>
+  * Privacy Policy <https://www.interviewbit.com/pages/privacy/>
+
+  * System Design Questions
+    <https://www.interviewbit.com/courses/system-design/>
+  * Google Interview Questions
+    <https://www.interviewbit.com/problems/google-interview-questions>
+  * Facebook Interview Questions
+    <https://www.interviewbit.com/problems/facebook-interview-questions>
+  * Amazon Interview Questions
+    <https://www.interviewbit.com/problems/amazon-interview-questions>
+  * Microsoft Interview Questions
+    <https://www.interviewbit.com/problems/microsoft-interview-questions>
+
+  * // Like Us <https://www.facebook.com/interviewbit>
+  * // Follow Us <https://twitter.com/interview_bit>
+  * // Email <mailto:hello@interviewbit.com>
+
+// We are in beta! We would love to hear your feedback.
+// Loved InterviewBit? Write us a testimonial.
+<http://www.quora.com/What-is-your-review-of-InterviewBit>
+×
+
+
+        Your feedback is important to help us improve.
+
+Feedback
+Close Submit Feedback
+

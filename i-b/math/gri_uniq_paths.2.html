@@ -1,0 +1,159 @@
+<div id='hint-type' data-hint-title="Complete Solution" 
+  data-suggest-edits-url = "/courses/1/topics/3/problems/grid-unique-paths/hints/175/suggest-edits/" 
+  data-does-edits="false"
+  data-hidden="true"></div>
+<div class="markdown-content">
+  <div role="tabpanel">
+
+  <ul class="nav nav-tabs" role="tablist" data-tabs="tabs">
+<li role="presentation"><a href="#c" aria-controls="c" role="tab" data-toggle="tab">C</a></li>
+<li role="presentation" class="active"><a href="#cplus" aria-controls="cplus" role="tab" data-toggle="tab">C++</a></li>
+<li role="presentation"><a href="#java" aria-controls="java" role="tab" data-toggle="tab">Java</a></li>
+<li role="presentation"><a href="#python" aria-controls="python" role="tab" data-toggle="tab">Python</a></li>
+<li role="presentation"><a href="#javascript" aria-controls="javascript" role="tab" data-toggle="tab">JS</a></li>
+</ul>
+
+  <div class="tab-content">
+
+    <div role="tabpanel" class="tab-pane" id="c">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-c highlighter-rouge"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">uniquePaths</span><span class="p">(</span><span class="kt">int</span> <span class="n">A</span><span class="p">,</span> <span class="kt">int</span> <span class="n">B</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">A</span><span class="o">==</span><span class="mi">1</span> <span class="o">||</span> <span class="n">B</span><span class="o">==</span><span class="mi">1</span><span class="p">)</span>    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">uniquePaths</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="n">B</span><span class="p">)</span><span class="o">+</span><span class="n">uniquePaths</span><span class="p">(</span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="o">-</span><span class="mi">1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane active" id="cplus">
+
+      <div class="highlighter-rouge"><pre class="highlight"><code>class Solution {
+    public:
+        int uniquePaths(int m, int n) {
+            // m+n-2 C n-1 = (m+n-2)! / (n-1)! (m-1)! 
+            long long ans = 1;
+            for (int i = n; i &lt; (m + n - 1); i++) {
+                ans *= i;
+                ans /= (i - n + 1);
+            }
+            return (int)ans;
+        }
+};
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="java">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Solution</span> <span class="o">{</span>
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">uniquePaths</span><span class="o">(</span><span class="kt">int</span> <span class="n">A</span><span class="o">,</span> <span class="kt">int</span> <span class="n">B</span><span class="o">)</span> <span class="o">{</span>
+	    
+	    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="n">result</span><span class="o">(</span><span class="n">A</span><span class="o">,</span> <span class="n">B</span><span class="o">);</span>
+
+        <span class="k">return</span> <span class="n">res</span><span class="o">;</span>	    
+	<span class="o">}</span>
+	
+	<span class="kd">public</span> <span class="kt">int</span> <span class="nf">result</span><span class="o">(</span><span class="kt">int</span> <span class="n">m</span><span class="o">,</span> <span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+	    
+	    <span class="kt">int</span> <span class="n">res</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+	    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">;</span>
+	    <span class="n">m</span><span class="o">--;</span>
+	    <span class="n">n</span><span class="o">--;</span>
+	    
+	    <span class="k">if</span> <span class="o">(</span><span class="n">m</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+	        <span class="k">return</span> <span class="mi">1</span><span class="o">;</span>
+	    
+	    <span class="kt">int</span> <span class="n">max</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">max</span><span class="o">(</span><span class="n">m</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+	    <span class="kt">int</span> <span class="n">val</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+	    <span class="kt">int</span> <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+	    <span class="kt">int</span> <span class="n">min</span> <span class="o">=</span> <span class="n">Math</span><span class="o">.</span><span class="na">min</span><span class="o">(</span><span class="n">m</span><span class="o">,</span> <span class="n">n</span><span class="o">);</span>
+	    
+	    <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">max</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">num</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+	        <span class="n">res</span> <span class="o">*=</span> <span class="n">i</span><span class="o">;</span>
+	        <span class="n">res</span> <span class="o">/=</span> <span class="n">val</span><span class="o">;</span>
+	        <span class="n">val</span><span class="o">++;</span>
+	    <span class="o">}</span>
+	    
+	    <span class="k">return</span> <span class="n">res</span><span class="o">;</span>
+	    
+	<span class="o">}</span>
+<span class="o">}</span>
+
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="python">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="c"># @param A : integer</span>
+    <span class="c"># @param B : integer</span>
+    <span class="c"># @return an integer</span>
+    <span class="k">def</span> <span class="nf">uniquePaths</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">A</span><span class="o">+</span><span class="n">B</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">A</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">math</span><span class="o">.</span><span class="n">factorial</span><span class="p">(</span><span class="n">B</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+</code></pre>
+      </div>
+
+    </div>
+
+    <div role="tabpanel" class="tab-pane" id="javascript">
+
+      <blockquote>
+        <p><strong>NOTE</strong> : This is user generated solution and not an editorial solution</p>
+      </blockquote>
+
+      <div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span> 
+   <span class="c1">//param a : integer</span>
+   <span class="c1">//param b : integer</span>
+    <span class="c1">//return an integer</span>
+	<span class="na">uniquePaths</span> <span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span> <span class="nx">b</span><span class="p">){</span>
+
+  <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+  <span class="kd">var</span> <span class="nx">m</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span> <span class="nx">b</span> <span class="p">);</span>
+  <span class="k">for</span><span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">b</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Array</span><span class="p">(</span> <span class="nx">a</span><span class="p">,</span> <span class="mi">0</span> <span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">for</span><span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">b</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">a</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">)</span>
+      <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="nx">m</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+  <span class="k">for</span><span class="p">(</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">b</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">for</span><span class="p">(</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">j</span> <span class="o">&lt;</span> <span class="nx">a</span><span class="p">;</span> <span class="nx">j</span><span class="o">++</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">i</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">j</span><span class="p">];</span>
+      <span class="k">if</span><span class="p">(</span> <span class="nx">j</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="p">]</span> <span class="o">+=</span> <span class="nx">m</span><span class="p">[</span><span class="nx">i</span><span class="p">][</span><span class="nx">j</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="k">return</span> <span class="nx">m</span><span class="p">[</span><span class="nx">b</span><span class="o">-</span><span class="mi">1</span><span class="p">][</span><span class="nx">a</span><span class="o">-</span><span class="mi">1</span><span class="p">];</span>
+	<span class="p">}</span>
+<span class="p">};</span>
+
+</code></pre>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script async src="https://www.youtube.com/iframe_api"></script>
